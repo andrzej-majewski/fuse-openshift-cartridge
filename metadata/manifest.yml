@@ -75,6 +75,14 @@ Endpoints:
       - Frontend:      ""
         Backend:       ""
   - Private-IP-Name:   IP
+    Private-Port-Name: HTTP_JETTY_PORT
+    Private-Port:      8080
+    Public-Port-Name:  HTTP_JETTY_PROXY_PORT
+    Protocols: [http]
+    Mappings:
+      - Frontend:      "/test"
+        Backend:       "test"    
+  - Private-IP-Name:   IP
     Private-Port-Name: SHUTDOWN_PORT
     Private-Port:      15001
   - Private-IP-Name:   IP
